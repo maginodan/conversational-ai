@@ -39,13 +39,6 @@ export const Nav = () => {
 
       <div className={"ml-auto flex items-center gap-1"}>
         <Button
-{/*           onClick={() => {
-            window.open(
-              pkg.homepage,
-              "_blank",
-              "noopener noreferrer"
-            );
-          }} */}
           variant={"ghost"}
           className={"ml-auto flex items-center gap-1.5"}
         >
