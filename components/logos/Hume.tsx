@@ -21,7 +21,7 @@ const HumeLogo: FC<HumeLogoProps> = (props) => {
         x="65"
         y="52"
         fill="currentColor"
-        fontSize="36"
+        fontSize="3.5em"
         fontFamily="Arial, sans-serif"
         fontWeight="bold"
       >
