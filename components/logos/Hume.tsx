@@ -5,8 +5,6 @@ export type HumeLogoProps = SVGAttributes<SVGSVGElement>;
 const HumeLogo: FC<HumeLogoProps> = (props) => {
   return (
     <svg
-      width="300"
-      height="80"
       viewBox="0 0 300 80"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
