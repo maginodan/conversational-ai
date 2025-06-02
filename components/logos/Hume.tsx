@@ -1,56 +1,36 @@
 import type { FC, SVGAttributes } from "react";
-import { useId } from "react";
 
-export type MaginoLogoProps = SVGAttributes<SVGSVGElement>;
+export type HumeLogoProps = SVGAttributes<SVGSVGElement>;
 
-const MaginoLogo: FC<MaginoLogoProps> = (props) => {
-  const id = useId();
-  const gradientId = `magino-logo-gradient-${id}`;
-
+const HumeLogo: FC<HumeLogoProps> = (props) => {
   return (
     <svg
       width="220"
-      height="60"
-      viewBox="0 0 220 60"
+      height="30"
+      viewBox="0 0 220 30"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       {...props}
     >
-      {/* Colored dots from Hume-style logo */}
-      <circle cx="10" cy="30" r="6" fill="#FFB5D6" />
-      <circle cx="30" cy="15" r="6" fill="#D2A7E9" />
-      <circle cx="30" cy="45" r="6" fill="#FFDCDC" />
-      <circle cx="50" cy="45" r="6" fill="#FFD1A4" />
-      <circle cx="70" cy="30" r="6" fill={`url(#${gradientId})`} />
-      <circle cx="90" cy="15" r="6" fill="#A0B0F6" />
-      <circle cx="110" cy="10" r="6" fill="#BBABED" />
+      {/* Sound wave lines */}
+      <rect x="5" y="6" width="3" height="13" fill="#0cc0df" rx="1.5" />
+      <rect x="11" y="2" width="3" height="21" fill="#5ce1e6" rx="1.5" />
+      <rect x="17" y="8" width="3" height="9" fill="#0cc0df" rx="1.5" />
+      <rect x="23" y="4" width="3" height="17" fill="#5ce1e6" rx="1.5" />
 
-      {/* Gradient definition */}
-      <defs>
-        <linearGradient
-          id={gradientId}
-          x1="0"
-          y1="0"
-          x2="1"
-          y2="1"
-        >
-          <stop offset="0.3" stopColor="#FFB7B2" />
-          <stop offset="0.7" stopColor="#AB9EFC" />
-        </linearGradient>
-      </defs>
-
-      {/* Brand Name */}
+      {/* Brand text */}
       <text
-        x="130"
-        y="38"
-        fontSize="26"
-        fontWeight="bold"
+        x="32"
+        y="17"
+        fill="currentColor"
+        fontSize="14"
         fontFamily="Arial, sans-serif"
-        fill="#333"
+        fontWeight="bold"
       >
-        Magino
+        KENT
       </text>
     </svg>
   );
 };
 
-export default MaginoLogo;
+export default HumeLogo;
