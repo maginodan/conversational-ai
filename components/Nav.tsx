@@ -47,6 +47,7 @@ export const Nav = () => {
           </span>
           <span>Star on GitHub</span>
         </Button>
+
         <Button
           onClick={toggleDark}
           variant={"ghost"}
