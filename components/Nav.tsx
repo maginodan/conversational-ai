@@ -32,9 +32,10 @@ export const Nav = () => {
         "px-4 py-2 flex items-center h-14 z-50 bg-card border-b border-border"
       }
     >
-    <div className="max-w-[80px] max-h-[30px]">
+    <div className="max-w-[100px] max-h-[40px]">
       <HumeLogo className="w-full h-auto" />
     </div>
+
 
       <div className={"ml-auto flex items-center gap-1"}>
         <Button
