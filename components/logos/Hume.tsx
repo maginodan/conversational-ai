@@ -5,23 +5,23 @@ export type HumeLogoProps = SVGAttributes<SVGSVGElement>;
 const HumeLogo: FC<HumeLogoProps> = (props) => {
   return (
     <svg
-      viewBox="0 0 750 100"
+      viewBox="0 0 800 130"  // Wider and taller to fit everything well
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       {...props}
     >
-      {/* Sound wave bars - scaled to match 80px height */}
-      <rect x="10" y="10" width="10" height="80" fill="#0cc0df" rx="5" />
-      <rect x="28" y="5" width="10" height="90" fill="#5ce1e6" rx="5" />
-      <rect x="46" y="20" width="10" height="60" fill="#0cc0df" rx="5" />
-      <rect x="64" y="12" width="10" height="78" fill="#5ce1e6" rx="5" />
+      {/* Sound wave bars: tall and spaced */}
+      <rect x="20" y="20" width="14" height="90" fill="#0cc0df" rx="7" />
+      <rect x="50" y="10" width="14" height="110" fill="#5ce1e6" rx="7" />
+      <rect x="80" y="35" width="14" height="65" fill="#0cc0df" rx="7" />
+      <rect x="110" y="18" width="14" height="85" fill="#5ce1e6" rx="7" />
 
-      {/* Brand text - 80px tall */}
+      {/* Brand text: positioned to align baseline with bars */}
       <text
-        x="90"
-        y="75"
+        x="150"
+        y="95"  // Y is baseline position; set for visual vertical alignment
         fill="currentColor"
-        fontSize="80px"
+        fontSize="80px"  // fixed font size for consistent appearance
         fontFamily="Arial, sans-serif"
         fontWeight="bold"
       >
