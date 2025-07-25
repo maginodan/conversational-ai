@@ -25,7 +25,7 @@ const HumeLogo: FC<HumeLogoProps> = (props) => {
         fontFamily="Arial, sans-serif"
         fontWeight="bold"
       >
-        KENT
+        Kent-Danielz
       </text>
     </svg>
   );
