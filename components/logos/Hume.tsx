@@ -5,23 +5,23 @@ export type HumeLogoProps = SVGAttributes<SVGSVGElement>;
 const HumeLogo: FC<HumeLogoProps> = (props) => {
   return (
     <svg
-      viewBox="0 0 600 100"
+      viewBox="0 0 800 150"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       {...props}
     >
-      {/* Sound wave lines - scaled up and vertically centered */}
-      <rect x="10" y="20" width="10" height="60" fill="#0cc0df" rx="5" />
-      <rect x="28" y="10" width="10" height="80" fill="#5ce1e6" rx="5" />
-      <rect x="46" y="30" width="10" height="40" fill="#0cc0df" rx="5" />
-      <rect x="64" y="18" width="10" height="64" fill="#5ce1e6" rx="5" />
+      {/* Sound wave bars - bigger and bolder */}
+      <rect x="20" y="30" width="14" height="90" fill="#0cc0df" rx="7" />
+      <rect x="44" y="10" width="14" height="130" fill="#5ce1e6" rx="7" />
+      <rect x="68" y="40" width="14" height="70" fill="#0cc0df" rx="7" />
+      <rect x="92" y="24" width="14" height="102" fill="#5ce1e6" rx="7" />
 
-      {/* Brand text - large and aligned */}
+      {/* Logo Text - scaled up */}
       <text
-        x="90"
-        y="75"
+        x="130"
+        y="105"
         fill="currentColor"
-        fontSize="80px"
+        fontSize="100px"
         fontFamily="Arial, sans-serif"
         fontWeight="bold"
       >
