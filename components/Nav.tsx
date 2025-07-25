@@ -45,7 +45,7 @@ export const Nav = () => {
           <span>
             <Github className={"size-4"} />
           </span>
-          <span>BufferOverFlow</span>
+          <span>Lets Chat</span>
         </Button>
 
         <Button
