@@ -5,17 +5,28 @@ export type HumeLogoProps = SVGAttributes<SVGSVGElement>;
 const HumeLogo: FC<HumeLogoProps> = (props) => {
   return (
     <svg
-      viewBox="0 0 200 140"
+      viewBox="0 0 450 80"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       {...props}
     >
-{/* Reduced height sound wave bars */}
-<rect x="20" y="60" width="20" height="60" fill="#0cc0df" rx="8" />
-<rect x="60" y="50" width="20" height="80" fill="#5ce1e6" rx="8" />
-<rect x="100" y="80" width="20" height="40" fill="#0cc0df" rx="8" />
-<rect x="140" y="65" width="20" height="55" fill="#5ce1e6" rx="8" />
+      {/* Sound wave lines - centered vertically */}
+      <rect x="10" y="25" width="6" height="30" fill="#0cc0df" rx="3" />
+      <rect x="22" y="15" width="6" height="50" fill="#5ce1e6" rx="3" />
+      <rect x="34" y="28" width="6" height="25" fill="#0cc0df" rx="3" />
+      <rect x="46" y="20" width="6" height="40" fill="#5ce1e6" rx="3" />
 
+      {/* Brand text - larger font and centered */}
+      <text
+        x="65"
+        y="52"
+        fill="currentColor"
+        fontSize="80px"
+        fontFamily="Arial, sans-serif"
+        fontWeight="bold"
+      >
+        Kent-Danielz
+      </text>
     </svg>
   );
 };
