@@ -10,11 +10,12 @@ const HumeLogo: FC<HumeLogoProps> = (props) => {
       fill="none"
       {...props}
     >
-      {/* Big sound wave bars only */}
-      <rect x="20" y="30" width="20" height="100" fill="#0cc0df" rx="8" />
-      <rect x="60" y="10" width="20" height="130" fill="#5ce1e6" rx="8" />
-      <rect x="100" y="50" width="20" height="70" fill="#0cc0df" rx="8" />
-      <rect x="140" y="25" width="20" height="95" fill="#5ce1e6" rx="8" />
+{/* Reduced height sound wave bars */}
+<rect x="20" y="60" width="20" height="60" fill="#0cc0df" rx="8" />
+<rect x="60" y="50" width="20" height="80" fill="#5ce1e6" rx="8" />
+<rect x="100" y="80" width="20" height="40" fill="#0cc0df" rx="8" />
+<rect x="140" y="65" width="20" height="55" fill="#5ce1e6" rx="8" />
+
     </svg>
   );
 };
