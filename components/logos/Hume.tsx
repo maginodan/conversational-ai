@@ -11,10 +11,10 @@ const HumeLogo: FC<HumeLogoProps> = (props) => {
       {...props}
     >
       {/* Sound wave lines - centered vertically */}
-      <rect x="10" y="25" width="6" height="30" fill="#0cc0df" rx="3" />
-      <rect x="22" y="15" width="6" height="50" fill="#5ce1e6" rx="3" />
-      <rect x="34" y="28" width="6" height="25" fill="#0cc0df" rx="3" />
-      <rect x="46" y="20" width="6" height="40" fill="#5ce1e6" rx="3" />
+      <rect x="20" y="50" width="16" height="80" fill="#0cc0df" rx="8" />
+      <rect x="48" y="20" width="16" height="140" fill="#5ce1e6" rx="8" />
+      <rect x="76" y="60" width="16" height="60" fill="#0cc0df" rx="8" />
+      <rect x="104" y="40" width="16" height="100" fill="#5ce1e6" rx="8" />
 
       {/* Brand text - larger font and centered */}
       <text
