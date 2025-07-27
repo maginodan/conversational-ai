@@ -3,13 +3,24 @@ import { cn } from "@/utils";
 import { useVoice } from "@humeai/voice-react";
 import Expressions from "./Expressions";
 import { AnimatePresence, motion } from "framer-motion";
-import { ComponentRef, forwardRef } from "react";
+import { ComponentRef, forwardRef, useEffect } from "react";
 
 const Messages = forwardRef<
   ComponentRef<typeof motion.div>,
   Record<never, never>
 >(function Messages(_, ref) {
-  const { messages } = useVoice();
+  const { messages, voice } = useVoice();
+
+  // Send system message once to set the assistant's name
+  useEffect(() => {
+    if (voice) {
+      voice.sendMessage({
+        role: "system",
+        content:
+          "You are an AI assistant named Kent Danielz. Introduce yourself with that name and never say EVI.",
+      });
+    }
+  }, [voice]);
 
   return (
     <motion.div
@@ -17,9 +28,7 @@ const Messages = forwardRef<
       className={"grow rounded-md overflow-auto p-4"}
       ref={ref}
     >
-      <motion.div
-        className={"max-w-2xl mx-auto w-full flex flex-col gap-4 pb-24"}
-      >
+      <motion.div className={"max-w-2xl mx-auto w-full flex flex-col gap-4 pb-24"}>
         <AnimatePresence mode={"popLayout"}>
           {messages.map((msg, index) => {
             if (
