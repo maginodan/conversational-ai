@@ -26,11 +26,10 @@ const Messages = forwardRef<
               msg.type === "user_message" ||
               msg.type === "assistant_message"
             ) {
-              // Replace "EVI" with "Kent Danielz" in assistant message content only
               const content =
-                msg.type === "assistant_message"
+                msg.type === "assistant_message" && typeof msg.message.content === "string"
                   ? msg.message.content.replace(/EVI/g, "Kent Danielz")
-                  : msg.message.content;
+                  : msg.message.content ?? "";
 
               return (
                 <motion.div
