@@ -1,3 +1,4 @@
+
 "use client";
 import { cn } from "@/utils";
 import { useVoice } from "@humeai/voice-react";
@@ -26,11 +27,6 @@ const Messages = forwardRef<
               msg.type === "user_message" ||
               msg.type === "assistant_message"
             ) {
-              const content =
-                msg.type === "assistant_message" && typeof msg.message.content === "string"
-                  ? msg.message.content.replace(/EVI/g, "Kent Danielz")
-                  : msg.message.content ?? "";
-
               return (
                 <motion.div
                   key={msg.type + index}
@@ -60,7 +56,7 @@ const Messages = forwardRef<
                   >
                     {msg.message.role}
                   </div>
-                  <div className={"pb-3 px-3"}>{content}</div>
+                  <div className={"pb-3 px-3"}>{msg.message.content}</div>
                   <Expressions values={{ ...msg.models.prosody?.scores }} />
                 </motion.div>
               );
